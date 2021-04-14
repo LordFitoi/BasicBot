@@ -1,0 +1,13 @@
+{
+    "thumbnail" : "https://licensedtocode.com/wp-content/uploads/2019/02/Happy-Test-Screen-01-825x510.png",
+    "title" : "Esto es una prueba de embed",
+    "description" : "Descripcion de muestra",
+    "color" : "0x36393F",
+    "inline" : true,
+    "content" : {
+        "`Sub Titulo 1 de prueba`" : "Texto de Muestra Texto de Muestra Texto de Muestra",
+        "`Sub Titulo 2 de prueba`" : "Texto de Muestra Texto de Muestra Texto de Muestra",
+        "`Sub Titulo 3 de prueba`" : "Texto de Muestra Texto de Muestra Texto de Muestra",
+        "`Sub Titulo 4 de prueba`" : "Texto de Muestra Texto de Muestra Texto de Muestra"
+    }
+}

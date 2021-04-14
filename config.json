@@ -1,0 +1,6 @@
+{
+    "Version" : "14.04.2021",
+    "Prefix" : "*",
+    "DebugMode" : true,
+    "BotToken" : "BotTokenHere"
+} 
