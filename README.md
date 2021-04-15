@@ -6,6 +6,8 @@ Just add the bot token in `config.json` and run the main file. The code was divi
 
 To make your own embed, you only need to clone the `template.json` file and add the content. If you want to use an embed that you made, you only need to call the `load_content` method from the bot, and pass the name of your .json file as an argument and pass the output of the last method to the function `create_embed` and now you've done an discord embed, try to send it in a channel like your in your own server.
 
+<img src = "https://media.discordapp.net/attachments/810336186010697748/832304526697955328/unknown.png">
+
 # Method List:
 ```python3
 def load_content(jsonfile_name : str) -> dict:
