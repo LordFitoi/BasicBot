@@ -1,5 +1,5 @@
 # BasicBot:
-It's an basic scalable Discord Bot made in Python & Discord.py. It contain a simple embed content load and a scalable command system.
+It's a basic scalable Discord Bot made in Python & Discord.py. It contain a simple embed content load and a scalable command system.
 
 # How to use:
 Just add the bot token in `config.json` and run the main file. The code was divided into function groups according them functionalities. If you want to add a new command, just go to Command Group `Funciones de Comando`, add a new fuction with the same structure to the others and finally add the command key name to the dictionary called "switch_method", now you can use your own command in discord.
