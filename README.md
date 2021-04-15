@@ -25,4 +25,6 @@ def is_Command(message : str) -> str, list:
     pass # Returns Command & Arguments if the message start with Command Prefix
 ```
 
+# Projects that use Basic Bot:
+- https://github.com/HectorPulido/Awesome-discord-bot
 
