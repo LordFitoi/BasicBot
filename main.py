@@ -1,5 +1,5 @@
 import json, os
-from core.structure.client import Client
+from core.models.client import Client
 
 main_path = os.path.dirname(__file__)
 
