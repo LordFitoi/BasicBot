@@ -1,6 +1,6 @@
 {
-    "Version" : "21.08.2021",
-    "Prefix" : "*",
-    "DebugMode" : true,
-    "BotToken" : "YOUR BOT TOKEN HERE"
+    "version" : "16.09.2021",
+    "prefix" : "*",
+    "debug_mode" : true,
+    "bot_token" : "YOUR TOKEN HERE"
 } 

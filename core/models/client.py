@@ -1,28 +1,35 @@
 import discord
-from core.models.mixins import CommandsMixin
+from os.path import dirname
+from discord.ext.commands import Bot
+from discord_slash import SlashCommand
 
-class Client(discord.Client, CommandsMixin):
+from core.models.mixins import UtilsMixin, ViewsMixin
+from core.models.commands import Commands
+
+
+Mixins = [UtilsMixin, ViewsMixin]
+
+class Client(Bot, Commands, *Mixins):
+    main_path = dirname(dirname(dirname(__file__)))
+
     def __init__(self, **kargs):
-        super().__init__()
+        self.version  = kargs.get("version")
+        self.token    = kargs.get("bot_token")
+        self.prefix   = kargs.get("prefix")
+        self.is_debug = kargs.get("debug_mode")
+    
+        super().__init__(command_prefix=self.prefix)
+        self.slash = SlashCommand(self, sync_commands=True)
 
-        self.config = kargs.get("config")
-        self.main_path = kargs.get("main_path")
-
-        self.commands = {
-            "example": self.cmd_example,
-            "embed": self.cmd_embed
-        }
-
-    async def eval_commands(self, message: str) -> None:
-        command, arguments = self.is_Command(message)
-
-        if command and command in self.commands:
-            await self.commands[command](message, arguments)
-            self.log_Message(message)
+    def run(self):
+        self.get_Commands()
+        super().run(self.token)
 
     async def on_ready(self) -> None:
-        print(f"@ Logged as {self.user}")
+        print(f"@ Logged as {self.user}\n")
 
-    async def on_message(self, message: object) -> None:
+    async def on_message(self, message: discord.Message):
+        await super().on_message(message)
+
         if not message.author.bot and not self.is_DMChannel(message):
-            await self.eval_commands(message)
+            self.log_Message(message)
